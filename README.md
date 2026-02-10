@@ -72,7 +72,7 @@ So: **one domain, two backends, incremental migration.**
 | **LegacyMvc** | Legacy monolith (home + contact) | 5001 | [LegacyMvc/README.md](LegacyMvc/README.md) |
 | **ModernMvc** | Modernised slice (new home) | 5002 | [ModernMvc/README.md](ModernMvc/README.md) |
 
-**Stack:** ASP.NET Core MVC, .NET 7, C#. HTTPS only.
+**Stack:** ASP.NET Core MVC, .NET 9, C#. HTTPS only.
 
 ---
 
