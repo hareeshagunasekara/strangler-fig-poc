@@ -1,12 +1,80 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+/* --- Common shell: invisible header & footer --- */
+.app-shell-header {
+  position: static;
+  width: 100%;
+  background: #f5f5f5;
+  border-bottom: 1px solid #e0e0e0;
+  font-weight: 400;
+  font-size: 1rem;
 }
 
+.app-shell-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.5rem 1rem 1.25rem;
+  min-height: 2.5rem;
+}
+
+.app-shell-header__left {
+  color: #555;
+  font-weight: 400;
+}
+
+.app-shell-header__center {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.app-shell-header__center a {
+  color: #333;
+  text-decoration: none;
+}
+
+.app-shell-header__center a:hover {
+  text-decoration: underline;
+}
+
+.app-shell-header__right {
+  color: #888;
+  font-size: 0.8125rem;
+}
+
+.app-shell-header__env {
+  font-weight: 400;
+}
+
+.app-shell-footer {
+  width: 100%;
+  background: #f8f8f8;
+  border-top: 1px solid #e8e8e8;
+  font-size: 0.875rem;
+  color: #666;
+  padding: 0.5rem 0;
+  margin-top: auto;
+}
+
+.app-shell-footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.app-shell-footer__link {
+  color: #666;
+  text-decoration: none;
+}
+
+.app-shell-footer__link:hover {
+  text-decoration: underline;
+}
+
+/* --- App styles --- */
 a {
   color: #0077cc;
 }
@@ -37,13 +105,5 @@ a {
 button.accept-policy {
   font-size: 1rem;
   line-height: inherit;
-}
-
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px;
 }
 

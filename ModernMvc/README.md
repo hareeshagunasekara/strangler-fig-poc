@@ -1,6 +1,10 @@
 # Modern MVC
 
-The **modernised slice** in the Strangler Fig PoC — new home dashboard and UI. See [solution README](../README.md) for ports and running the whole solution.
+## What ModernMvc Does
+
+ModernMvc is the **modernised backend** in the Strangler Fig PoC. It is not the app users hit directly—ProxyFacade forwards requests here for URLs that have been migrated. It currently serves the new Home dashboard; more routes are added here as they are modernised. See [solution README](../README.md) for ports and running the whole solution.
+
+---
 
 ## Purpose
 

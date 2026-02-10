@@ -1,6 +1,10 @@
 # Legacy MVC
 
-The **existing monolith** in the Strangler Fig PoC — gradually replaced by the modernised app. See [solution README](../README.md) for ports and running the whole solution.
+## What LegacyMvc Does
+
+LegacyMvc is the **existing monolith** backend in the Strangler Fig PoC. It is not the app users hit directly—ProxyFacade forwards requests here for URLs that have not yet been modernised. It serves the legacy Home and Contact pages and is gradually replaced as routes are moved to ModernMvc. See [solution README](../README.md) for ports and running the whole solution.
+
+---
 
 ## Purpose
 
