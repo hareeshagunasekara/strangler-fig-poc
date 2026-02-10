@@ -2,7 +2,7 @@
    Legacy Home Dashboard (Home page)
    ========================================================================== */
 
-/* Legacy "old" look (fallback / shared legacy) */
+/* Legacy "old" look */
 .legacy-home {
   font-family: Georgia, "Times New Roman", serif;
   color: #333;
@@ -60,6 +60,7 @@
 
 /* Legacy Home Dashboard */
 .legacy-dashboard {
+  position: relative;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 14px;
   color: #333;
@@ -69,6 +70,22 @@
   min-height: 60vh;
   border: 2px solid #555;
   box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Legacy label */
+.legacy-dashboard .legacy-badge {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 1;
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  color: #fff;
+  background: #b91c1c;
+  border-radius: 999px;
 }
 
 .legacy-dashboard__header {
@@ -91,13 +108,6 @@
   margin: 0;
   font-size: 1rem;
   color: #444;
-}
-
-.legacy-dashboard__monolith {
-  margin: 0.35rem 0 0;
-  font-size: 1.0rem;
-  color: #555;
-  font-style: italic;
 }
 
 .legacy-dashboard__section-title {

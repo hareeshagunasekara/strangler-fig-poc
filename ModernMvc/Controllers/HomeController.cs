@@ -1,4 +1,4 @@
-﻿using System.Diagnostics;
+using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using ModernMvc.Models;
 
@@ -15,12 +15,22 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        return View();
-    }
-
-    public IActionResult Privacy()
-    {
-        return View();
+        var recentOrders = new List<OrderViewModel>
+        {
+            new() { OrderId = 1001, Status = "Processing" },
+            new() { OrderId = 1002, Status = "Shipped" },
+            new() { OrderId = 1003, Status = "Pending" }
+        };
+        var model = new HomeDashboardViewModel
+        {
+            TotalOrders = 24,
+            PendingCount = 5,
+            ProcessingCount = 8,
+            ShippedCount = 9,
+            DelayedCount = 2,
+            RecentOrders = recentOrders
+        };
+        return View(model);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
