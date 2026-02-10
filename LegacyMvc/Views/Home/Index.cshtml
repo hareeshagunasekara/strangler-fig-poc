@@ -1,0 +1,67 @@
+@model LegacyMvc.Models.HomeDashboardViewModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="legacy-dashboard">
+    <header class="legacy-dashboard__header">
+        <h1 class="legacy-dashboard__system-name">@Model.SystemName</h1>
+        <p class="legacy-dashboard__welcome">@Model.WelcomeText</p>
+        <p class="legacy-dashboard__monolith">This is the current monolith.</p>
+    </header>
+
+    <section class="legacy-dashboard__quick-actions" aria-label="Quick actions">
+        <h2 class="legacy-dashboard__section-title">Quick Actions</h2>
+        <table class="legacy-dashboard__actions-table" role="presentation">
+            <tr>
+                <td><a href="#" class="legacy-dashboard__action">View Orders</a></td>
+                <td><a href="#" class="legacy-dashboard__action">Create Order</a></td>
+                <td><a href="/contact" class="legacy-dashboard__action">Contact Support</a></td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="legacy-dashboard__summary" aria-label="Order summary">
+        <h2 class="legacy-dashboard__section-title">Summary</h2>
+        <table class="legacy-dashboard__summary-table" role="presentation">
+            <tr>
+                <td class="legacy-dashboard__summary-cell legacy-dashboard__summary-cell--total">
+                    <span class="legacy-dashboard__summary-label">Total Orders</span>
+                    <span class="legacy-dashboard__summary-value">@Model.TotalOrders</span>
+                </td>
+                <td class="legacy-dashboard__summary-cell legacy-dashboard__summary-cell--pending">
+                    <span class="legacy-dashboard__summary-label">Pending</span>
+                    <span class="legacy-dashboard__summary-value">@Model.PendingCount</span>
+                </td>
+                <td class="legacy-dashboard__summary-cell legacy-dashboard__summary-cell--shipped">
+                    <span class="legacy-dashboard__summary-label">Shipped</span>
+                    <span class="legacy-dashboard__summary-value">@Model.ShippedCount</span>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="legacy-dashboard__orders" aria-label="Recent orders">
+        <h2 class="legacy-dashboard__section-title">Recent Orders</h2>
+        <p class="legacy-dashboard__monolith-msg">This page is served by the legacy monolith.</p>
+        <div class="legacy-dashboard__orders-box">
+            <table class="legacy-dashboard__orders-table">
+                <thead>
+                    <tr>
+                        <th>Order #</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var order in Model.RecentOrders)
+                    {
+                        <tr>
+                            <td>Order #@order.OrderId</td>
+                            <td>@order.Status</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>
